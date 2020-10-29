@@ -6,7 +6,21 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+var mongoose = require('mongoose');
+const config = require('./config/config');
+
 var app = express();
+mongoose.Promise = global.Promise;
+mongoose.connect(config.database, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+}).then(() => {
+    console.info('Database connected successfully..! ');
+}, (error) => { 
+    console.warn('Could not connected to database : ' + error);
+});
 
 app.use(logger('dev'));
 app.use(express.json());

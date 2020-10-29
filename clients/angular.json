@@ -28,9 +28,24 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
+              "node_modules/venobox/venobox/venobox.css",
+              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery.easing/jquery.easing.min.js",
+              "node_modules/jquery-waypoints/waypoints.min.js",
+              "node_modules/counterup/jquery.counterup.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+              "node_modules/venobox/venobox/venobox.min.js",
+              "node_modules/aos/dist/aos.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +138,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "clients"
+    }
+  },
+  "defaultProject": "clients",
+  "cli": {
+    "analytics": "12f33a9e-93de-4ebc-8dfe-988f2ff1e511"
+  }
 }
