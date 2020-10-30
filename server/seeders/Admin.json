@@ -1,0 +1,12 @@
+{
+  "model": "Admin",
+  "documents": [
+    {
+      "name": "Super Admin",
+      "email": "mechatrox@gmail.com",
+      "username": "mechatrox",
+      "password": "mechatrox123",
+      "avatar": ""      
+    }
+  ]
+}

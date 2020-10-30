@@ -1,5 +1,5 @@
 module.exports = {
-    database: 'mongodb://localhost:27017/dbs',
+    database: 'mongodb://localhost:27017/mechatroxDb',
     passport: {
         secret: 'tunePaysAuthSecret',
     },
