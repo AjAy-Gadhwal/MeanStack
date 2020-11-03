@@ -3,7 +3,10 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { urlConstant } from 'src/app/constant/urlConstant';
 import { Globals } from 'src/app/globals';
+import { AlertService } from 'src/app/services/alert.service';
+import { AuthService } from 'src/app/services/authService';
 import { CommonService } from 'src/app/services/commonService';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +19,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
   constructor(
     public formBuilder: FormBuilder,
     public commonService: CommonService,
+    private toastService: ToastService,
+    private authService: AuthService,
+    private alertService: AlertService,
     public router: Router
   ) {
     this.createForm();
@@ -47,31 +53,29 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   lognFormSubmit(): void {
     this.lognFormIsClicked.setValue(true);
+    this.toastService.removeAll();
 
     if (this.lognForm.invalid && this.lognFormIsSubmmited.value === false) {
-      alert('Please enter valid values.');
+      this.toastService.error('Please enter valid values.');        
       return;
     } else {
       this.lognFormIsSubmmited.setValue(true);
 
       this.commonService.post(urlConstant.Auth.Login, this.lognForm.value).subscribe((res) => {        
-        if (!!res) {
-          // this.toasterService.pop('success', 'Success', res.message);
-          this.router.navigate(['/admin/page']);   
+        if (!!res && res['status'] === 200) {
+          this.authService.adminLogin(res['data']).subscribe((res: any) => {
+            this.toastService.success(`Login successfully.`);                        
+            this.router.navigate(['/admin/products']);   
+          });             
         } else {          
-          // this.toasterService.pop('error', 'Error', res.message);
-          this.router.navigate(['/admin/page']);   
+          this.alertService.warningAlert(res['message']);
         }
       }, (error) => {
-        if (error != null) {
-          // this.toasterService.pop('error', 'Error', error.message);
-        }            
-        // this.router.navigate(['/admin/properties/list']);   
+        this.toastService.error(error.message);                        
       }).add(() => {
         this.lognForm.reset();
         this.lognFormIsClicked.setValue(false);
-        this.lognFormIsSubmmited.setValue(false);
-        // this.commonService.hideLoading();
+        this.lognFormIsSubmmited.setValue(false);        
       });
     }
   }
@@ -88,6 +92,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   isFormSubmittedAndError(controlName: string, errorName: string = '', notError: Array<string> = new Array()): any {
-    return Globals.isFormSubmittedAndError(this.lognForm, this.lognForm.get('isClicked').value, controlName, errorName, notError);
+    return Globals.isFormSubmittedAndError(this.lognForm, this.lognFormIsClicked.value, controlName, errorName, notError);
   }
 }

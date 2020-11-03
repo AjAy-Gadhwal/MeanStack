@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
+const multerFileUpload = require('../utilities/multerFileUpload');
+
 
 let ProductCtrl = require('../controllers/ProductCtrl');
 
-router.get('/get', ProductCtrl.get);
-// router.post('/isAdmin', AdminCtrl.isAdmin);
-// router.post('/logout', AdminCtrl.logout);
-// router.put('/changePassword', AdminCtrl.changePassword);
+router.post('/get', ProductCtrl.get);
+router.post('/insert', passport.authenticate('jwt', { session: false }), multerFileUpload.uploadFile.single('image'), ProductCtrl.insert);
+router.put('/update', passport.authenticate('jwt', { session: false }), multerFileUpload.uploadFile.single('image'), ProductCtrl.update);
 
 module.exports = router;

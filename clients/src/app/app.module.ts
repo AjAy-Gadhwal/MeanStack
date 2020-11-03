@@ -3,20 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
+import { NgbModule, NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
+import { ToastModalComponent } from './custom-components/toast-modal/toast-modal.component';
+import { AdminAuthGuard } from './admin/guards/admin-auth.guard';
+import { headerIntercepter } from './admin/intercepters/headerIntercepter';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToastModalComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgxTrimDirectiveModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    NgbToastModule
+  ],  
+  entryComponents: [
+    ToastModalComponent
   ],
-  providers: [],
+  providers: [
+    AdminAuthGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: headerIntercepter, multi:true },
+  ],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

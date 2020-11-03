@@ -1,6 +1,7 @@
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
+const AdminModel = require('../models/AdminModel');
 
 
 // exports.privacyPolicy = (req, res, next) => {
@@ -24,9 +25,9 @@ const config = require('../config/config');
 /**========================================= Admin ============================================**/
 exports.login = async (req, res, next) => {
     if (req.body.username && req.body.password) {
-        passport.authenticate('adminLogin', async (err, user, info) => {
+        passport.authenticate('adminLogin', async (err, admin, info) => {
             try {
-                if (err || !user) {
+                if (err || !admin) {
                     //const error = new Error('An Error occurred')
                     //return next(error);
                     return res.json({
@@ -34,18 +35,17 @@ exports.login = async (req, res, next) => {
                         message: info.message
                     });
                 }
-                req.login(user, { session: false }, async (error) => {
+                req.login(admin, { session: false }, async (error) => {
 
                     if (error) { return next(error) }
 
-                    const body = { sub: user._id, email: user.email, isAdmin: true, random: Math.floor(Math.random() * Math.pow(100, 5)) };
-                    const token = jwt.sign({ user: body }, config.passport.secret, { expiresIn: 604800 });
+                    const body = { sub: admin._id, email: admin.email, isAdmin: true, random: Math.floor(Math.random() * Math.pow(100, 5)) };
+                    const token = jwt.sign({ admin: body }, config.passport.secret, { expiresIn: 604800 });
 
-                    user.token = "Bearer " + token;
-                    user.fcmToken = req.body.fcmToken || '';
-                    user.save()
+                    admin.token = "Bearer " + token;
+                    admin.save()
 
-                    let userResponded = user.toJSON();
+                    let userResponded = admin.toJSON();
                     delete userResponded.password;
 
                     return res.json({
@@ -65,3 +65,37 @@ exports.login = async (req, res, next) => {
         });
     }
 };
+
+exports.logout = async(req, res) => {
+    const reqBody = req.body;
+
+    try {
+        if(!!reqBody && reqBody['_id']) {
+            await AdminModel.findByIdAndUpdate({ "_id": reqBody['_id'] }, { token: '' }, function (err, admin) {
+                console.log('admin : ', admin);
+                
+                if (err) {
+                    return res.json({
+                        status: 400,
+                        message: 'Opps..! This Is Bad Request',
+                        error: err
+                    });
+                }
+        
+                return res.json({
+                    status: 200,
+                    message: 'Get admin data by id.',
+                    data: admin
+                }); 
+            });   
+        } else {
+            throw Error('Admin id missing.')
+        }
+    } catch (error) {
+        return res.json({
+            status: 400,
+            message: 'Please enter a valid data.',
+            error: error
+        });
+    }    
+}

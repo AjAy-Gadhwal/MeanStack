@@ -1223,8 +1223,19 @@ section {
 				display: inline-block;
 				transition: ease-in-out 0.3s;
 				color: #fff;
+				text-decoration: none;
+
+				&.edit {
+					background: #4caf50;
+				}
+
+				&.delete {
+					background: #f44336;
+				}
+
 				&:hover {
 					background: #3b8af2;
+					text-decoration: none;
 				}
 			}
 			i {
@@ -1786,4 +1797,69 @@ section {
 			}
 		}
 	}
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+
+.invalid-feedback {
+	display: block;
+}
+
+
+.isInvalid {
+	border-color:#dc3545 !important;
+
+	&:focus, &:focus-within, &:hover {
+		border-color:#dc3545 !important;
+		box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25) !important;
+	}
+}
+
+.form-group {
+	position: relative;
+
+	&.noLabel {
+		.required {
+			right: -5px !important;
+			top: 10px !important;
+		}
+	}
+
+	.required {
+		font-size: 14px;
+		color: #f30c1c;
+		display: inline-block;
+		vertical-align: middle;
+		height: 14px;
+		position: absolute;
+		right: -9px;
+		top: 34px;
+	}
+}
+
+.close {
+	background: transparent;
+	border: 0;        
+	line-height: 25px;
+	height: 25px;
+	width: 25px;
+	padding: 0;
+	outline: none;
+	transition: ease-in-out 0.3s;
+	
+	i, span {
+		font-size: 25px;
+		line-height: 25px;
+		height: 25px;
+		width: 25px;
+		transition: ease-in-out 0.3s;
+
+		&:hover {
+			transform: rotate(90deg);  
+			transition: ease-in-out 0.3s;                          
+		}
+	}        
 }

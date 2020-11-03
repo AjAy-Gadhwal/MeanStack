@@ -1,0 +1,13 @@
+.propertyCoverImageBtn, .propertyCoverImage  {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+
+    .btn-label {
+        .fa {
+            font-size: 10rem;
+            padding-bottom: 1rem;
+        }
+    }
+}
