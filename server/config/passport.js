@@ -66,7 +66,7 @@ passport.use('adminLogin', new LocalStrategy({
 
 
 var jwtOptions = {
-    jwtFromRequest: ExtractJWT.fromAuthHeaderWithScheme('jwt'),
+    jwtFromRequest: ExtractJWT.fromAuthHeaderWithScheme('Bearer'),
     secretOrKey: config.passport.secret
 };
 passport.use(new JWTStrategy(jwtOptions, async (jwt_payload, done) => {    
@@ -74,7 +74,7 @@ passport.use(new JWTStrategy(jwtOptions, async (jwt_payload, done) => {
     try {
         // let token = req.get("Authorization");
 
-        const user = await Admin.findOne({
+        const user = await AdminModel.findOne({
             id: jwt_payload.sub
         });
         console.log('user : ', user);

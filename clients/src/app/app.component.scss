@@ -1,0 +1,38 @@
+:host::ng-deep {
+    .invalid-feedback {
+        display: block;
+    }
+
+
+    .isInvalid {
+        border-color:#dc3545 !important;
+
+        &:focus, &:focus-within, &:hover {
+            border-color:#dc3545 !important;
+            box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25) !important;
+        }
+    }
+
+    .form-group {
+        position: relative;
+
+        &.noLabel {
+            .required {
+                right: -5px !important;
+                top: 10px !important;
+            }
+        }
+
+        .required {
+            margin: 0 -6px 0 3px;
+            font-size: 13px;
+            color: #e75862;
+            display: inline-block;
+            vertical-align: middle;
+            height: 11px;
+            position: absolute;
+            right: -5px;
+            top: 38;
+        }
+    }
+}

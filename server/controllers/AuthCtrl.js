@@ -41,7 +41,7 @@ exports.login = async (req, res, next) => {
                     const body = { sub: user._id, email: user.email, isAdmin: true, random: Math.floor(Math.random() * Math.pow(100, 5)) };
                     const token = jwt.sign({ user: body }, config.passport.secret, { expiresIn: 604800 });
 
-                    user.token = "jwt " + token;
+                    user.token = "Bearer " + token;
                     user.fcmToken = req.body.fcmToken || '';
                     user.save()
 
