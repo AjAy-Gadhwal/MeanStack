@@ -52,4 +52,8 @@ export class UserComponent implements OnInit {
       document.getElementsByTagName('head')[0].appendChild(node);
     }
   }
+
+  trackByFn(index: string = '', item: any = {}) {
+    return item._id;
+  }
 }
