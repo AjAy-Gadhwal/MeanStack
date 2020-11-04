@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { urlConstant } from 'src/app/constant/urlConstant';
+import { urlConstant } from 'src/app/custom/constant/urlConstant';
 import { Globals } from 'src/app/globals';
 import { AlertService } from 'src/app/services/alert.service';
 import { AuthService } from 'src/app/services/authService';

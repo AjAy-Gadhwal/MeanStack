@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 var Product = new Schema({
     name: { type: String, required: [true, 'Product name required.'], default: null, trim: true },    
-    image: { type: String, required: [true, 'Product image required.'], default: null, trim: true },
+    image: { type: String, default: null, trim: true },
     description: { type: String, default: null, trim: true },        
     products: [{
         type: mongoose.ObjectId,

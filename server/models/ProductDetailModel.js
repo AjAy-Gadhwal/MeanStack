@@ -8,7 +8,7 @@ var ProductDetail = new Schema({
     type: { type: String, trim: true },
     powerKw: { type: String, trim: true },
     powerHp: { type: String, trim: true },
-    flange: { type: String, required: [true, 'Product flange required.'], trim: true },
+    flange: { type: String, trim: true },
     application: { type: String, trim: true },
     industries: { type: String, trim: true },
     productId: { type: mongoose.ObjectId, required: [true, 'Please enter product.'], default: null, trim: true, ref: "Product" },

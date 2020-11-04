@@ -1,13 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { HttpErrorResponse } from '@angular/common/http';
-import { throwError, of, Observable, BehaviorSubject } from 'rxjs';
-import { Router } from '@angular/router';
-import { catchError, map } from 'rxjs/operators';
-import { Globals } from '../globals';
+import { of, Observable, BehaviorSubject } from 'rxjs';
+import { urlConstant } from '../custom/constant/urlConstant';
 import { CommonService } from './commonService';
 import { ToastService } from './toast.service';
-import { urlConstant } from '../constant/urlConstant';
 
 @Injectable({
     providedIn: 'root',

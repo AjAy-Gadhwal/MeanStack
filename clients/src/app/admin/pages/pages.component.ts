@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { urlConstant } from 'src/app/constant/urlConstant';
+import { urlConstant } from 'src/app/custom/constant/urlConstant';
+import { AlertService } from 'src/app/services/alert.service';
 import { AuthService } from 'src/app/services/authService';
 import { CommonService } from 'src/app/services/commonService';
+import { ToastService } from 'src/app/services/toast.service';
+import { ViewProductDetailModalComponent } from 'src/app/user/view-product-detail-modal/view-product-detail-modal.component';
 import { environment } from 'src/environments/environment';
 import { AddEditProductModalComponent } from './add-edit-product-modal/add-edit-product-modal.component';
 
@@ -20,6 +23,8 @@ export class PagesComponent implements OnInit {
     private modalService: NgbModal,
     public commonService: CommonService,
     public authService: AuthService,
+    public alertService: AlertService,
+    public toastService: ToastService,
   ) { 
     this.getAllProduct();
   }
@@ -54,7 +59,7 @@ export class PagesComponent implements OnInit {
   openAddEditProductModal(product: any = {}): void {
     console.log('product : ', product);
     
-    const modalRef = this.modalService.open(AddEditProductModalComponent, { size: 'lg' });
+    const modalRef = this.modalService.open(AddEditProductModalComponent, { size: 'xl' });
     modalRef.componentInstance.product = product;
     
     modalRef.result.then((res) => {
@@ -63,5 +68,35 @@ export class PagesComponent implements OnInit {
     }, (reason) => {
         console.log('reason : ', reason);            
     });
+  }
+
+  
+  openViewProductModal(product: any = {}): void {
+    console.log('product : ', product);
+    
+    const modalRef = this.modalService.open(ViewProductDetailModalComponent, { size: 'xl' });
+    modalRef.componentInstance.product = product;    
+  }
+
+  deleteProduct(product: any = {}): void { 
+    this.alertService.confirmationAlert('', 'This product deleted permanetaly.').then((res: any) => {
+      console.log('Is Confirmed : ', res);
+      if(res && res.value === true) {
+          this.commonService.delete(urlConstant.Product.Delete, product['_id']).subscribe((res: any) => {
+              console.log('Res : ', res);
+              if(res['status'] === 200) {
+                  this.toastService.success('Payment method deleted successfully.');                                 
+              } else {
+                  this.toastService.error(res['message']);           
+              }
+  
+              this.getAllProduct();
+          });
+      } 
+    });       
+  }
+
+  trackByFn(index: string = '', item: any = {}) {
+    return item._id;
   }
 }

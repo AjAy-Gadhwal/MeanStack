@@ -1,4 +1,4 @@
-import { environment } from '../../environments/environment';
+import { environment } from 'src/environments/environment';
 
 export const urlConstant = {
     Auth: {
@@ -8,6 +8,7 @@ export const urlConstant = {
     Product: {
         Insert: environment.apiUrl + 'product/insert',
         Update: environment.apiUrl + 'product/update',
+        Delete: environment.apiUrl + 'product/delete',
         Get: environment.apiUrl + 'product/get',
     },
     Users: {

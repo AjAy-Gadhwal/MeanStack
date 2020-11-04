@@ -7,42 +7,126 @@
     </button>
 </div>
 <div class="modal-body">
-    <form [formGroup]="productForm" *ngIf="productForm" (submit)="productFormSubmit()" autocomplete="off" role="form" >
+    <form appInvalidFormFocus [formGroup]="productForm" *ngIf="productForm" (submit)="productFormSubmit()" autocomplete="off" role="form" >
         <div class="row">
-            <div class="col-12 mb-3">
-                <div class="d-flex flex-row flex-wrap justify-content-center align-items-center w-100 h-100 mb-3 mt-2">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group mb-3">
+                            <label for="name">Product Name</label>
+                            <input type="text" class="form-control" id="name" formControlName="name" [ngClass]="{ 'isInvalid': isFormSubmittedAndError('name') }" placeholder="Enter product name" maxlength="100" trim="blur" >
+
+                            <span class="required">*</span>
+                            <div *ngIf="isFormSubmittedAndError('name')" class="invalid-feedback">
+                                <div *ngIf="isFormSubmittedAndError('name', 'required')">Product name is required.</div>
+                            </div>
+                        </div>       
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group mb-3">
+                            <label for="description">Product Description</label>
+                            <input type="text" class="form-control" id="description" formControlName="description" [ngClass]="{ 'isInvalid': isFormSubmittedAndError('description') }" placeholder="Enter product description" maxlength="200" trim="blur" >
+        
+                            <span class="required">*</span>
+                            <div *ngIf="isFormSubmittedAndError('description')" class="invalid-feedback">
+                                <div *ngIf="isFormSubmittedAndError('description', 'required')">Product description is required.</div>
+                            </div>
+                        </div>       
+                    </div>            
+                </div>
+            </div>
+            
+            <div class="col-4">
+                <div class="d-flex flex-row flex-wrap justify-content-end align-items-end w-100 h-100">
                     <input type="file" hidden #propertyCoverImage (change)="onChangePropertyCoverImage($event)" accept="image/*" >
         
-                    <button type="button" class="btn btn-labeled btn-outline-primary mx-2 btn-lg propertyCoverImageBtn" (click)="propertyCoverImage.click()" *ngIf="!productForm.get('imageUrl').value">
+                    <button type="button" class="btn btn-labeled btn-outline-primary btn-lg propertyCoverImageBtn" (click)="propertyCoverImage.click()" *ngIf="!productForm.get('imageUrl').value">
                         <span class="btn-label"><i class="icofont-camera icofont-5x"></i></span><br/>Upload a Cover Image 
                     </button>
         
                     <img [src]="productForm.get('imageUrl').value" *ngIf="productForm.get('imageUrl').value" (click)="propertyCoverImage.click()" alt="..." class="img-thumbnail propertyCoverImage">
                 </div>        
             </div>
+        </div>
+    
+        <div class="row mt-4">
+            <div class="col-12">
+                <fieldset class="border p-3 mb-4" *ngFor="let prodDetail of productFormProducts.controls; trackBy: trackByFn; let i=index" >
+                    <legend class="w-auto h6 text-muted">Product Detail {{i + 1}}</legend>
+                    
+                    <div class="row" [formGroup]="prodDetail" >
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'model' + i">Model</label>
+                                <input type="text" class="form-control" [id]="'model' + i" formControlName="model" [ngClass]="{ 'isInvalid': isArrayFormSubmittedAndError(prodDetail, 'model') }" placeholder="Enter product model" maxlength="100" trim="blur" >
 
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="name">Product Name</label>
-                    <input type="text" class="form-control" id="name" formControlName="name" [ngClass]="{ 'isInvalid': isFormSubmittedAndError('name') }" placeholder="Enter product name" maxlength="100" trim="blur" >
+                                <span class="required">*</span>
+                                <div *ngIf="isArrayFormSubmittedAndError(prodDetail, 'model')" class="invalid-feedback">
+                                    <div *ngIf="isArrayFormSubmittedAndError(prodDetail, 'model', 'required')">Model is required.</div>
+                                </div>
+                            </div>   
+                        </div>
 
-                    <span class="required">*</span>
-                    <div *ngIf="isFormSubmittedAndError('name')" class="invalid-feedback">
-                        <div *ngIf="isFormSubmittedAndError('name', 'required')">Product name is required.</div>
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'ratio' + i">Ratio</label>
+                                <input type="text" class="form-control" [id]="'ratio' + i" formControlName="ratio" placeholder="Enter product ratio" maxlength="100" trim="blur" >
+                            </div>   
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'size' + i">Size</label>
+                                <input type="text" class="form-control" [id]="'size' + i" formControlName="size" placeholder="Enter product size" maxlength="100" trim="blur" >
+                            </div>   
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'type' + i">Type</label>
+                                <input type="text" class="form-control" [id]="'type' + i" formControlName="type" placeholder="Enter product type" maxlength="100" trim="blur" >
+                            </div>   
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'powerKw' + i">Power</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" [id]="'powerKw' + i" formControlName="powerKw" placeholder="Power in KW" maxlength="100" trim="blur" >
+                                    <input type="text" class="form-control" [id]="'powerHp' + i" formControlName="powerHp" placeholder="Power in HP" maxlength="100" trim="blur" >
+                                </div>                                
+                            </div>   
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'flange' + i">Flange</label>
+                                <input type="text" class="form-control" [id]="'flange' + i" formControlName="flange" placeholder="Enter product flange" maxlength="100" trim="blur" >
+                            </div>   
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label [for]="'application' + i">Application</label>
+                                <input type="text" class="form-control" [id]="'application' + i" formControlName="application" placeholder="Enter product application" maxlength="100" trim="blur" >
+                            </div>   
+                        </div>
+
+                        <div class="col-8">
+                            <div class="form-group mb-3">
+                                <label [for]="'industries' + i">Industries</label>
+                                <input type="text" class="form-control" [id]="'industries' + i" formControlName="industries" placeholder="Enter product industries" maxlength="100" trim="blur" >
+                            </div>   
+                        </div>
                     </div>
-                </div>       
+                </fieldset>
             </div>
-
-            <div class="col-6">
-                <div class="form-group">
-                    <label for="description">Product Description</label>
-                    <input type="text" class="form-control" id="description" formControlName="description" [ngClass]="{ 'isInvalid': isFormSubmittedAndError('description') }" placeholder="Enter product description" maxlength="200" trim="blur" >
-
-                    <span class="required">*</span>
-                    <div *ngIf="isFormSubmittedAndError('description')" class="invalid-feedback">
-                        <div *ngIf="isFormSubmittedAndError('description', 'required')">Product description is required.</div>
-                    </div>
-                </div>       
+        </div> 
+        
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-success btn-sm" (click)="createProductDetailForm()" >Add Product Details</button>
             </div>
         </div>
     </form>

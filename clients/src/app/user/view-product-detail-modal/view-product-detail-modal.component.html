@@ -1,0 +1,105 @@
+<div class="modal-header">
+    <h5 class="modal-title">Product Details</h5>
+
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')">
+        <i class="icofont-close"></i>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-12">
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto h6 text-muted">Product</legend>
+           
+                <div class="row">
+                    <div class="col-8">
+                        <table class="table table-borderless table-hover table-sm">
+                            <tbody>
+                                <tr>
+                                    <th class="title" >Name</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{product.name}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="title" >Description</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{product.description}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="d-flex flex-row flex-wrap justify-content-end align-items-end w-100 h-100">               
+                            <img [src]="product.image ? serverDomain + product.image : 'assets/img/logo/logo.png'" alt="..." class="img-thumbnail propertyCoverImage">
+                        </div>        
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col-12">
+            <fieldset class="border p-3 mb-4" *ngFor="let prodDetail of product.products; trackBy: trackByFn; let i=index">
+                <legend class="w-auto h6 text-muted">Product Model Detail ({{prodDetail.model}})</legend>
+
+                <div class="row">
+                    <div class="col-6">
+                        <table class="table table-borderless table-hover table-sm">
+                            <tbody>
+                                <tr>
+                                    <th class="title" >Ratio</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.ratio}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="title" >Size</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.size}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="title" >Type</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.Type}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="title" >Power</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.powerKw}} Kw, {{prodDetail.powerHp}} Hp</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-6">
+                        <table class="table table-borderless table-hover table-sm">
+                            <tbody>
+                                <tr>
+                                    <th class="title" >Flange</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.flange}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="title" >Application</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.application}}</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="title" >Industries</th>
+                                    <th class="colon" > : </th>
+                                    <td class="data" >{{prodDetail.industries}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>

@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
 import { NgbModule, NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
-import { ToastModalComponent } from './custom-components/toast-modal/toast-modal.component';
 import { AdminAuthGuard } from './admin/guards/admin-auth.guard';
 import { headerIntercepter } from './admin/intercepters/headerIntercepter';
+import { ToastModalComponent } from './custom/components/toast-modal/toast-modal.component';
+import { InvalidFormFocusDirective } from './custom/directrives/invalid-form-focus.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToastModalComponent
+    ToastModalComponent,
+    InvalidFormFocusDirective
   ],
   imports: [
     BrowserModule,

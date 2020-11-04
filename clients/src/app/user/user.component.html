@@ -117,20 +117,17 @@
             </div>
 
             <div class="row">
-                <div *ngFor="let product of products" class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div *ngFor="let product of products; trackBy: trackByFn;" class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100"  (click)="openViewProductModal(product)">
                     <div class="member">
                         <div class="member-img">
-                            <img [src]="product.image" class="img-fluid" alt="">
+                            <img [src]="product.image ? serverDomain + product.image : 'assets/img/logo/logo.png'" class="img-fluid" alt="">
                             <div class="social">
-                                <a href=""><i class="icofont-twitter"></i></a>
-                                <a href=""><i class="icofont-facebook"></i></a>
-                                <a href=""><i class="icofont-instagram"></i></a>
-                                <a href=""><i class="icofont-linkedin"></i></a>
+                                <a href="javascript:;" class="edit" ><i class="icofont-eye-alt"></i></a>
                             </div>
                         </div>
                         <div class="member-info">
                             <h4>{{product.name}}</h4>
-                            <span>{{product.model}}</span>
+                            <span>{{product.description}}</span>
                         </div>
                     </div>
                 </div>
