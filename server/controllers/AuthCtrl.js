@@ -1,8 +1,9 @@
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
+const MailerCtrl = require('../utilities/Mailer');
+const ejs = require('ejs');
 const AdminModel = require('../models/AdminModel');
-
 
 // exports.privacyPolicy = (req, res, next) => {
 //     try {
@@ -98,4 +99,32 @@ exports.logout = async(req, res) => {
             error: error
         });
     }    
+}
+
+exports.contactUs = async(req, res) => {    
+    try {
+        const reqBody = req.body;
+        const admin = await AdminModel.findOne().exec();
+
+        console.log('admin : ', admin);
+
+        ejs.renderFile(__dirname + '/../views/thankContactUs.ejs', { name: reqBody['name'], subject: reqBody['subject'] }, function (err, data) {
+            if (err) {
+                throw err;
+            }
+
+            MailerCtrl.sendMail(admin['email'], 'mechatrox', data);
+        });
+
+        return res.json({
+            status: 200,
+            message: 'Email sent'
+        });
+    } catch (error) {
+        return res.json({
+            status: 400,
+            message: 'Please enter a valid data.',
+            error: error
+        });
+    }
 }

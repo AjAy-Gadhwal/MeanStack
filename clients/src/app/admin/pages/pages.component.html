@@ -7,7 +7,8 @@
     
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                    <!-- <li class="active"><a href="#main">Products</a></li> -->
+                    <li [routerLink]="['/admin/pages/products']" routerLinkActive="router-link-active" ><a href="javascript:;" >Products</a></li>
+                    <li [routerLink]="['/admin/pages/aboutUs']" routerLinkActive="router-link-active" ><a href="javascript:;" >About Us</a></li>                    
                     <li><a href="javascript:;" (click)="logout()" >Logout</a></li>
                 </ul>
             </nav>
@@ -15,43 +16,6 @@
     </header>
 
     <main id="main">
-        <section id="products" class="products" >
-            <div class="container" data-aos="fade-up">    
-                <!-- <div class="section-title">
-                    <h2>Products</h2>
-                </div> -->
-                
-                <div class="row">
-                    <div class="col-6">
-                        <div class="form-group noLabel">
-                            <input type="text" class="form-control" id="search" placeholder="Search" maxlength="100" trim="blur" >                         
-                        </div>
-                    </div>
-
-                    <div class="col-6 text-right">
-                        <button class="btn btn-success" (click)="openAddEditProductModal()" >Add Product</button>
-                    </div>
-                </div>
-
-                <div class="row mt-4">
-                    <div *ngFor="let product of products; trackBy: trackByFn;" class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member">
-                            <div class="member-img">
-                                <img [src]="product.image ? serverDomain + product.image : 'assets/img/logo/logo.png'" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href="javascript:;" (click)="openViewProductModal(product)" ><i class="icofont-eye-alt"></i></a>
-                                    <a href="javascript:;" (click)="openAddEditProductModal(product)" class="edit" ><i class="icofont-ui-edit"></i></a>
-                                    <a href="javascript:;" (click)="deleteProduct(product)" class="delete" ><i class="icofont-ui-delete"></i></a>                                    
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>{{product.name}}</h4>
-                                <span>{{product.description}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <router-outlet></router-outlet>
     </main>
 </div>

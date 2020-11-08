@@ -7,5 +7,9 @@ module.exports = {
         salt: {
             rounds: 10,
         },
-    }
+    },
+    emailConfig: {
+        email: "mechatroxdrive@gmail.com",
+        password: "Mechatrox@3535"
+    },
 };

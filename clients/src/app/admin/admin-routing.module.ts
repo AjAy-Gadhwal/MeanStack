@@ -6,7 +6,7 @@ import { AdminAuthGuard } from './guards/admin-auth.guard';
 const routes: Routes = [
   { path: '', redirectTo: 'login' },
   { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
-  { path: 'products', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AdminAuthGuard] },
+  { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AdminAuthGuard] },
 ];
 
 @NgModule({

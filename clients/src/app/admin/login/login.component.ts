@@ -24,6 +24,14 @@ export class LoginComponent implements OnInit, AfterViewInit {
     private alertService: AlertService,
     public router: Router
   ) {
+    const auth = this.authService.adminData();
+    const isLogin = auth['token'] && auth['_id'];
+    console.log('auth : ', auth);
+    
+    if (isLogin) {
+      this.router.navigate(['/admin/pages/products']);
+    }
+
     this.createForm();
   }
 

@@ -12,9 +12,9 @@ export class AdminAuthGuard implements CanActivate {
     ) {}
 
     canActivate() {
-        let auth = this.authService.adminData();
+        const auth = this.authService.adminData();
         
-        let isLogin = auth['token'] && auth['_id'];
+        const isLogin = auth['token'] && auth['_id'];
         console.log('isLogin : ', isLogin);
         
         if (isLogin) {

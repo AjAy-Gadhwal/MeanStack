@@ -25,6 +25,8 @@ mongoose.connect(config.database, {
 });
 
 var app = express();
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -40,6 +42,9 @@ app.use(cors());
 
 app.get('/', (req, res) => { res.send('Page under construction.'); });
 app.post('/', (req, res) => { res.send('Page under construction.'); });
+app.get('/email', (req, res) => { 
+  res.render("thankContactUs.ejs", { name: "UserName", subject: "Subject" })
+});
 app.use('/api', routes);
 app.use((req, res) => { res.send('Invalid Url.'); });
 

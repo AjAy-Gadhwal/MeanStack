@@ -312,6 +312,7 @@ h6 {
 			position: relative;
 			white-space: nowrap;
 			padding: 10px 0 10px 28px;
+			outline: none !important;
 			>a {
 				&:before {
 					content: "";
@@ -337,6 +338,8 @@ h6 {
 		font-weight: 600;
 		padding: 0 3px;
 		font-family: "Open Sans", sans-serif;
+		text-decoration: none;
+		
 		&:hover {
 			&:before {
 				visibility: visible;
@@ -356,7 +359,7 @@ h6 {
 			}
 		}
 	}
-	.active {
+	.active, .router-link-active {
 		>a {
 			&:before {
 				visibility: visible;
@@ -388,7 +391,7 @@ h6 {
 					color: #106eea;
 				}
 			}
-			.active {
+			.active, .router-link-active {
 				>a {
 					color: #106eea;
 				}
@@ -491,7 +494,7 @@ h6 {
 			text-decoration: none;
 		}
 	}
-	.active {
+	.active, .router-link-active {
 		>a {
 			color: #106eea;
 			text-decoration: none;
@@ -524,7 +527,7 @@ h6 {
 			padding-left: 20px;
 		}
 	}
-	.active.drop-down {
+	.active.drop-down, .router-link-active.drop-down {
 		>a {
 			&:after {
 				content: "\eaa1";
@@ -1016,7 +1019,7 @@ section {
 		border-radius: 50%;
 		background-color: rgba(255, 255, 255, 0.4) !important;
 	}
-	.owl-dot.active {
+	.owl-dot.active, .owl-dot.router-link-active {
 		background-color: #106eea !important;
 	}
 }
@@ -1146,7 +1149,7 @@ section {
 			border-radius: 50%;
 			background-color: #ddd !important;
 		}
-		.owl-dot.active {
+		.owl-dot.active, .owl-dot.router-link-active {
 			background-color: #106eea !important;
 		}
 	}
@@ -1199,6 +1202,8 @@ section {
 		border-radius: 4px;
 		background: #fff;
 		box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
+		transition: ease-in-out 0.3s;
+
 		.member-img {
 			position: relative;
 			overflow: hidden;
@@ -1263,9 +1268,27 @@ section {
 				color: #777777;
 			}
 		}
+
+		&::after {
+			position: absolute;
+			width: calc(100% - 20px);
+			height: calc(100% - 20px);
+			top: 0px;
+			left: 10px;
+			background-color: #c5c5c559;
+			margin-bottom: 20px;
+		}
+
 		&:hover {
+			&::after { 
+				transition: ease-in-out 0.3s;
+				content: '';
+				z-index: 1;
+			}
+
 			.social {
 				opacity: 1;
+				z-index: 2;
 				bottom: 15px;
 			}
 		}
