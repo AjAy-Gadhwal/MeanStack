@@ -43,7 +43,8 @@ app.use(cors());
 app.get('/', (req, res) => { res.send('Page under construction.'); });
 app.post('/', (req, res) => { res.send('Page under construction.'); });
 app.get('/email', (req, res) => { 
-  res.render("thankContactUs.ejs", { name: "UserName", subject: "Subject" })
+  res.render("thankContactUsAdmin.ejs", { name: "UserName", subject: "Subject", message: "message" })
+  // res.render("thankContactUsAdmin.ejs", { name: "UserName", subject: "Subject" })
 });
 app.use('/api', routes);
 app.use((req, res) => { res.send('Invalid Url.'); });

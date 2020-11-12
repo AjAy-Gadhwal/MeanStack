@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-weight: 100;
+        font-size: 35px;
+        padding: 0px;
+        margin: 0px;        
+      }
+
+      .container {
+        position: relative;        
+        width: 70%;  
+        margin-left: 15%;
+      }
+
+      .row {
+        position: relative;        
+        width: 100%; 
+        color: #4e4e4e;
+        font-size: 25px;  
+        letter-spacing: 1px; 
+        text-align: justify;    
+      }   
+      
+      .img {
+        width: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .mt-40 {
+        margin-top: 40px;
+      }
+
+      .mb-40 {
+        margin-bottom: 40px;
+      }
+
+      .mt-20 {
+        margin-top: 20px;
+      }
+      .red {
+          color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" >
+      <div class="row mt-40 mb-20" >
+        <img class="img" src="http://mechatrox.com/public/assets/images/logo.png">
+      </div>
+  
+      <div class="row" style="margin: 40px 0px;" >
+        Mr/Mrs. <%= name %> 
+      </div>
+
+      <div class="row" style="margin: 40px 0px;" >
+        Subject : <%= subject %>
+      </div>
+
+      <div class="row" style="margin: 40px 0px;" >
+        Message: <%= message %>
+      </div>
+          
+      <div class="row mt-40" >
+        -The mechatrox team
+      </div>  
+    </div>
+  </body>
+</html>

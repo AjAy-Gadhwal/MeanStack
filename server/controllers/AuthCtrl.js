@@ -108,6 +108,14 @@ exports.contactUs = async(req, res) => {
 
         console.log('admin : ', admin);
 
+        ejs.renderFile(__dirname + '/../views/thankContactUsAdmin.ejs', { name: reqBody['name'], subject: reqBody['subject'], message: reqBody['message'] }, function (err, data) {
+            if (err) {
+                throw err;
+            }
+
+            MailerCtrl.sendMail("mechatroxdrive@gmail.com", reqBody['subject'], data, reqBody['email']);
+        });
+
         ejs.renderFile(__dirname + '/../views/thankContactUs.ejs', { name: reqBody['name'], subject: reqBody['subject'] }, function (err, data) {
             if (err) {
                 throw err;

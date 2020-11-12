@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const config = require('./../config/config');
 
-exports.sendMail = (to, subject, body) => {  
+exports.sendMail = (to, subject, body, from) => {  
     return new Promise((resolve, reject)=>{         
         var transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -12,7 +12,7 @@ exports.sendMail = (to, subject, body) => {
         });
         
         const message = {
-            from: config.emailConfig.email,
+            from: from || config.emailConfig.email,
             to: to,
             subject: subject,
             html: body,
