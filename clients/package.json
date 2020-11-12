@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prod_build_zip": "ng build --prod && gzipper c -v --incremental --level=9 ./dist ./distGzip",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
