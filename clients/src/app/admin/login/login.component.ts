@@ -73,7 +73,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
         if (!!res && res['status'] === 200) {
           this.authService.adminLogin(res['data']).subscribe((res: any) => {
             this.toastService.success(`Login successfully.`);                        
-            this.router.navigate(['/admin/products']);   
+            this.router.navigate(['/admin/pages/products']);   
           });             
         } else {          
           this.alertService.warningAlert(res['message']);

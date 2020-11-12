@@ -29,7 +29,7 @@ export class WebDatasComponent implements OnInit {
   getWebData(): void {
     this.commonService.post(urlConstant.WebData.Get).subscribe((res) => {
       if(res && res['status'] === 200) {
-        this.webData = res['data'];
+        this.webData = res['data'] || {};
         this.createForm(this.webData);
       }
     });
