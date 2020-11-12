@@ -69,7 +69,7 @@ export class UserComponent implements OnInit {
   getWebData(): void {
     this.commonService.post(urlConstant.WebData.Get).subscribe((res) => {
       if(res && res['status'] === 200) {
-        this.webData = res['data'];
+        this.webData = res['data'] || {};
       }
     });
   }
@@ -77,8 +77,8 @@ export class UserComponent implements OnInit {
   getAllProduct(): void {
     this.commonService.post(urlConstant.Product.Get).subscribe((res) => {
       if(res && res['status'] === 200) {
-        this.products = res['data'];
-        this.tempProducts = res['data'];
+        this.products = res['data'] || [];
+        this.tempProducts = res['data'] || [];
       }
     });
   }

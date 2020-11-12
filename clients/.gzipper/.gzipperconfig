@@ -1301,9 +1301,9 @@
       "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\index.html": {
         "revisions": [
           {
-            "lastChecksum": "e57fc96f17a272e00ba252bb3573848b",
+            "lastChecksum": "72531efe1d8574f746e67fd083328f29",
             "fileId": "107584fe-28d1-4b59-ba69-d19039594724",
-            "date": "2020-11-12T19:05:09.129Z",
+            "date": "2020-11-12T19:27:54.511Z",
             "options": {
               "level": 9
             }
@@ -1424,6 +1424,54 @@
             "lastChecksum": "107d665e42c97869d0185b3c7b77466d",
             "fileId": "93bd3ccd-3a14-4389-813c-880afe202298",
             "date": "2020-11-12T19:05:09.298Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\12-es2015.1a24e66500c6c96efe4b.js": {
+        "revisions": [
+          {
+            "lastChecksum": "3292a7f267e521a2bfd03d23e4c9c221",
+            "fileId": "9591b8b5-1406-4cb5-abe1-33439558df48",
+            "date": "2020-11-12T19:27:53.463Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\12-es5.1a24e66500c6c96efe4b.js": {
+        "revisions": [
+          {
+            "lastChecksum": "dbfdc7ae0bb281362addf52e8acf7b4e",
+            "fileId": "0ef0ecb3-4593-4954-9bae-9189eb9e1667",
+            "date": "2020-11-12T19:27:53.503Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\runtime-es2015.edf3c877cd8a36c9ba86.js": {
+        "revisions": [
+          {
+            "lastChecksum": "184dbe9e2e494b80f9f3cd9282ec0670",
+            "fileId": "18b6be5f-6062-4783-8170-6466963883c7",
+            "date": "2020-11-12T19:27:54.550Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\runtime-es5.edf3c877cd8a36c9ba86.js": {
+        "revisions": [
+          {
+            "lastChecksum": "5ed920dcf7187a63bfa38fe228bed7ce",
+            "fileId": "51ad2e34-5ab0-41f2-8a0e-337776117a2e",
+            "date": "2020-11-12T19:27:54.562Z",
             "options": {
               "level": 9
             }
