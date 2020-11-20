@@ -10,6 +10,8 @@ import { AdminAuthGuard } from './admin/guards/admin-auth.guard';
 import { headerIntercepter } from './admin/intercepters/headerIntercepter';
 import { ToastModalComponent } from './custom/components/toast-modal/toast-modal.component';
 import { InvalidFormFocusDirective } from './custom/directrives/invalid-form-focus.directive';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { InvalidFormFocusDirective } from './custom/directrives/invalid-form-foc
     NgxTrimDirectiveModule,
     AppRoutingModule,
     NgbModule,
-    NgbToastModule
+    NgbToastModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],  
   entryComponents: [
     ToastModalComponent

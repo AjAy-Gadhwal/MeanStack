@@ -101,9 +101,9 @@
       "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\3rdpartylicenses.txt": {
         "revisions": [
           {
-            "lastChecksum": "81bd09ebebcbfeb4aed79145ab69bf49",
+            "lastChecksum": "3f5e5af92cc8c50af3f50539c58d04c0",
             "fileId": "436d221c-8da6-418b-9c27-131a753130bb",
-            "date": "2020-11-12T19:05:06.521Z",
+            "date": "2020-11-20T19:03:14.117Z",
             "options": {
               "level": 9
             }
@@ -1301,9 +1301,9 @@
       "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\index.html": {
         "revisions": [
           {
-            "lastChecksum": "410b3a5eed3739ad439dbb6f6860d4cd",
+            "lastChecksum": "04b7231e401624aa0941ea88eed8e9ad",
             "fileId": "107584fe-28d1-4b59-ba69-d19039594724",
-            "date": "2020-11-20T18:37:18.092Z",
+            "date": "2020-11-20T19:03:14.617Z",
             "options": {
               "level": 9
             }
@@ -1808,6 +1808,414 @@
             "lastChecksum": "ea574c44bf0e7f7093e6d2ec4dc35b61",
             "fileId": "5eb32b83-1f6b-4485-8631-81af8e9aba35",
             "date": "2020-11-20T18:37:18.188Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\android-icon-144x144.png": {
+        "revisions": [
+          {
+            "lastChecksum": "ee5e180e51da17228dbe65bcde1a9599",
+            "fileId": "344feb0b-83f8-42df-bddf-132fa763abf9",
+            "date": "2020-11-20T19:03:14.170Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\android-icon-192x192.png": {
+        "revisions": [
+          {
+            "lastChecksum": "677d69a22b2b9d1adeabc5a5a21b83d9",
+            "fileId": "cdd42b7a-6f65-4815-bab1-dbacf0473a04",
+            "date": "2020-11-20T19:03:14.175Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\android-icon-36x36.png": {
+        "revisions": [
+          {
+            "lastChecksum": "da6c9eb25bc536e9930869d5195f9aff",
+            "fileId": "b02f9260-418d-417e-ad57-68edd0d1f842",
+            "date": "2020-11-20T19:03:14.179Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\android-icon-48x48.png": {
+        "revisions": [
+          {
+            "lastChecksum": "8c48fd68a1e40aadd9ca64da1b8feb4c",
+            "fileId": "fa6216a1-e53c-4fb6-9124-45dce09cd79c",
+            "date": "2020-11-20T19:03:14.183Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\android-icon-72x72.png": {
+        "revisions": [
+          {
+            "lastChecksum": "44a9704efeb0ef98ca3fc500807f1ce0",
+            "fileId": "f902e10a-1853-4055-ba2c-20434e817d57",
+            "date": "2020-11-20T19:03:14.187Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\android-icon-96x96.png": {
+        "revisions": [
+          {
+            "lastChecksum": "866458d3cb7c2b7c299699b840119960",
+            "fileId": "785198f3-a27b-4af1-babd-1fdc57c7c6e1",
+            "date": "2020-11-20T19:03:14.192Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-114x114.png": {
+        "revisions": [
+          {
+            "lastChecksum": "2add610098bfd857ee3193f3221d971d",
+            "fileId": "5b54ca78-f15b-4f2b-a4c4-0d2aa7d437b3",
+            "date": "2020-11-20T19:03:14.197Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-120x120.png": {
+        "revisions": [
+          {
+            "lastChecksum": "46c678bd5cbcee894355acdb032ea7dc",
+            "fileId": "0e96d1be-89c9-40cf-a44a-b26621de2bcc",
+            "date": "2020-11-20T19:03:14.205Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-144x144.png": {
+        "revisions": [
+          {
+            "lastChecksum": "ee5e180e51da17228dbe65bcde1a9599",
+            "fileId": "4a842677-ebef-4ee0-8e4b-fd3c8d079ed8",
+            "date": "2020-11-20T19:03:14.209Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-152x152.png": {
+        "revisions": [
+          {
+            "lastChecksum": "4c84092f559418871fa0bdbeabfad423",
+            "fileId": "25cfff3e-8375-4814-873a-5105a4547975",
+            "date": "2020-11-20T19:03:14.213Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-180x180.png": {
+        "revisions": [
+          {
+            "lastChecksum": "155d80feafa44e1d0b2fc417a3bd9e5d",
+            "fileId": "ff34243e-a5df-45be-96c4-a1e1ba0f4cf8",
+            "date": "2020-11-20T19:03:14.218Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-57x57.png": {
+        "revisions": [
+          {
+            "lastChecksum": "03a6faf6e6de72e6b40f6d8b2cee7d5f",
+            "fileId": "b47302d5-abd9-4fe4-934c-9aa578398d4a",
+            "date": "2020-11-20T19:03:14.225Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-60x60.png": {
+        "revisions": [
+          {
+            "lastChecksum": "b7822241529a2229c682757ca6c733cb",
+            "fileId": "93a70906-7b67-4ff1-9636-a7403f665dd9",
+            "date": "2020-11-20T19:03:14.236Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-72x72.png": {
+        "revisions": [
+          {
+            "lastChecksum": "44a9704efeb0ef98ca3fc500807f1ce0",
+            "fileId": "19904648-d545-4120-9389-bbb480bf1c52",
+            "date": "2020-11-20T19:03:14.242Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-76x76.png": {
+        "revisions": [
+          {
+            "lastChecksum": "fca97fba5328723b3a99cb7e21d6bec9",
+            "fileId": "b6708f4a-f719-4e0a-b16d-5b8943764ff6",
+            "date": "2020-11-20T19:03:14.246Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon-precomposed.png": {
+        "revisions": [
+          {
+            "lastChecksum": "9f9396aff00bd146d05f14f38d716bd7",
+            "fileId": "86fb5d37-85e4-4ade-9b6d-6377f2d31c7d",
+            "date": "2020-11-20T19:03:14.251Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\apple-icon.png": {
+        "revisions": [
+          {
+            "lastChecksum": "9f9396aff00bd146d05f14f38d716bd7",
+            "fileId": "1aa1c6ad-2601-40a0-934c-265f7e61ab90",
+            "date": "2020-11-20T19:03:14.257Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\browserconfig.xml": {
+        "revisions": [
+          {
+            "lastChecksum": "653d077300a12f09a69caeea7a8947f8",
+            "fileId": "6c59a841-7408-4ef1-a3a3-5bc43c0f0edc",
+            "date": "2020-11-20T19:03:14.266Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\favicon-16x16.png": {
+        "revisions": [
+          {
+            "lastChecksum": "34d7e4a1df88dd369b382662cee6607d",
+            "fileId": "1825ae83-214a-4a91-bddb-3e916b981364",
+            "date": "2020-11-20T19:03:14.270Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\favicon-32x32.png": {
+        "revisions": [
+          {
+            "lastChecksum": "a5caf90c826cbbd9226288d603cb14ec",
+            "fileId": "009d4758-dc47-41f7-a381-a9e62a7aa191",
+            "date": "2020-11-20T19:03:14.274Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\favicon-96x96.png": {
+        "revisions": [
+          {
+            "lastChecksum": "866458d3cb7c2b7c299699b840119960",
+            "fileId": "45a2e2db-749b-49a4-a198-ca4af841bd37",
+            "date": "2020-11-20T19:03:14.277Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\favicon.ico": {
+        "revisions": [
+          {
+            "lastChecksum": "77c6b15bdfc775dc890ff01b4a37e6b0",
+            "fileId": "67a47cc7-7c55-4466-9127-e2f26af55fab",
+            "date": "2020-11-20T19:03:14.288Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\manifest.json": {
+        "revisions": [
+          {
+            "lastChecksum": "b58fcfa7628c9205cb11a1b2c3e8f99a",
+            "fileId": "87ed521b-5762-45e7-bf72-2c3c3baa7d4c",
+            "date": "2020-11-20T19:03:14.298Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\ms-icon-144x144.png": {
+        "revisions": [
+          {
+            "lastChecksum": "ee5e180e51da17228dbe65bcde1a9599",
+            "fileId": "86330601-e3d0-4104-a482-a78b1d9b7ba7",
+            "date": "2020-11-20T19:03:14.301Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\ms-icon-150x150.png": {
+        "revisions": [
+          {
+            "lastChecksum": "82e9b9a943a9af549d914820e8f0a560",
+            "fileId": "2313e9ed-729e-4342-9d27-0f59b07c8787",
+            "date": "2020-11-20T19:03:14.307Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\ms-icon-310x310.png": {
+        "revisions": [
+          {
+            "lastChecksum": "dd368711d00fde67c1bd751f20cc20be",
+            "fileId": "e5110f98-17a9-4874-bc40-76e7b62fbaf5",
+            "date": "2020-11-20T19:03:14.313Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\assets\\img\\favicon\\ms-icon-70x70.png": {
+        "revisions": [
+          {
+            "lastChecksum": "7fa499682b7b58710930a3ca64fb8699",
+            "fileId": "d56a7039-0ddc-42e2-bee0-ea0ea68bffc4",
+            "date": "2020-11-20T19:03:14.319Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\main-es2015.a47303c279cd48c921fe.js": {
+        "revisions": [
+          {
+            "lastChecksum": "a5c31b1aa67a81fc6decc2e3f711e5ae",
+            "fileId": "7611a457-fa6f-4799-b3c6-1f3564905be7",
+            "date": "2020-11-20T19:03:14.622Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\main-es5.a47303c279cd48c921fe.js": {
+        "revisions": [
+          {
+            "lastChecksum": "1070886fe727272d52e1f2b835752c84",
+            "fileId": "47a1d55a-4cf2-4032-93cc-b255630996f9",
+            "date": "2020-11-20T19:03:14.653Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\manifest.webmanifest": {
+        "revisions": [
+          {
+            "lastChecksum": "d4f2ce26d5be68c4e6cea92471884ae9",
+            "fileId": "5a6d7eb5-31b4-4daf-b9cf-cdb5f3d8f52e",
+            "date": "2020-11-20T19:03:14.688Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\ngsw-worker.js": {
+        "revisions": [
+          {
+            "lastChecksum": "0a57357be8efaab1b6ea9cd9bd0982b4",
+            "fileId": "8098d8b9-0d57-4961-96fd-66b28c07370d",
+            "date": "2020-11-20T19:03:14.694Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\ngsw.json": {
+        "revisions": [
+          {
+            "lastChecksum": "716596d68dc321a1e703ea38b3a6314b",
+            "fileId": "586cc555-7279-4d38-842e-09fcb74505c9",
+            "date": "2020-11-20T19:03:14.712Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\safety-worker.js": {
+        "revisions": [
+          {
+            "lastChecksum": "cce0b16d6bc4aa9e74c9337e78c59e4b",
+            "fileId": "b7eebf72-73fb-42d4-b241-643cf8478860",
+            "date": "2020-11-20T19:03:14.732Z",
+            "options": {
+              "level": 9
+            }
+          }
+        ]
+      },
+      "E:\\My Devlopment\\ProjectAngular\\MeanStack\\clients\\dist\\worker-basic.min.js": {
+        "revisions": [
+          {
+            "lastChecksum": "cce0b16d6bc4aa9e74c9337e78c59e4b",
+            "fileId": "d14cbb1d-38b8-4b2d-a752-0b5f9735c72e",
+            "date": "2020-11-20T19:03:14.750Z",
             "options": {
               "level": 9
             }
