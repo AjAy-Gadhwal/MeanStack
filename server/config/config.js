@@ -1,5 +1,5 @@
 module.exports = {
-    database: 'mongodb://localhost:27017/mechatroxDb',
+    database: 'mongodb+srv://mechatrox:umesh1234@cluster0.0ljb0.mongodb.net/mechatroxDb?retryWrites=true&w=majority',
     passport: {
         secret: 'tunePaysAuthSecret',
     },
@@ -10,6 +10,6 @@ module.exports = {
     },
     emailConfig: {
         email: "mechatroxdrive@gmail.com",
-        password: "Mechatrox@3535"
+        password: "Umesh@14793535"
     },
 };
